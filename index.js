@@ -1,21 +1,23 @@
 const https = require("https");
 const fs = require("fs");
 
-// Your Gemini API key from Google AI Studio
-const API_KEY = "AIzaSyCJDOX7aE-LwirA61QBZCF6s1QcYVrtDpo";
 
-// Model
+const API_KEY = "your api key";
+
+
 const MODEL = "gemini-2.0-flash";
-// gemni-2.5-flash
 
-// Get user prompt from terminal arguments
+
+//my code1=AIzaSyCxsgyZKQet
+// EraddOKdyoQBt9L2qXUvBTE
 const prompt = process.argv.slice(2).join(" ");
 if (!prompt) {
   console.log('Usage: node index.js "Describe your backend project requirements here"');
   process.exit(1);
 }
 
-// Add instructions to prompt to get code + folder structure + commands
+// my code2=AIzaSyDvGcmMsI1T
+// k4AiRRd5ruuWzcIDjNFYoyE
 const enhancedPrompt = `
 this is a backend question.
 Based on the following project requirements, provide:
@@ -30,12 +32,14 @@ ${prompt}
 Please provide plain text output only. Do not include any emojis or color formatting.
 `;
 
-// Request body
+//my code3=AIzaSyC_hcPsEGc6yYe1
+// TlBtTxKEQQ5p-VWRNHs
 const data = JSON.stringify({
   contents: [{ parts: [{ text: enhancedPrompt }] }]
 });
 
-// HTTPS request options
+//my code4=AIzaSyDs0evCkUw9
+// K1J_8VMYX-tbf0IBq39IxWc
 const options = {
   hostname: "generativelanguage.googleapis.com",
   path: `/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`,
@@ -46,7 +50,10 @@ const options = {
   }
 };
 
-// Make request
+
+//my code5=AIzaSyCnNvXhEYVof
+// k-3KLDHDmkG4Wp9OyX4ENU
+
 const req = https.request(options, (res) => {
   let body = "";
   res.on("data", (chunk) => (body += chunk));
@@ -59,10 +66,8 @@ const req = https.request(options, (res) => {
         return;
       }
 
-      // Extract output text
       const output = json.candidates[0].content.parts[0].text;
 
-      // Save to a file with timestamp
       const fileName = `backend_output_${Date.now()}.txt`;
       fs.writeFileSync(fileName, output, "utf8");
 
@@ -74,6 +79,8 @@ const req = https.request(options, (res) => {
     }
   });
 });
+//my code6=AIzaSyCJDOX7a
+// E-LwirA61QBZCF6s1QcYVrtDpo
 
 req.on("error", (err) => console.error("Request error:", err));
 req.write(data);
@@ -81,9 +88,17 @@ req.end();
 
 
 
-//my code1=AIzaSyCxsgyZKQetEraddOKdyoQBt9L2qXUvBTE
-// my code2=AIzaSyDvGcmMsI1Tk4AiRRd5ruuWzcIDjNFYoyE
-//my code3=AIzaSyC_hcPsEGc6yYe1TlBtTxKEQQ5p-VWRNHs
-//my code4=AIzaSyDs0evCkUw9K1J_8VMYX-tbf0IBq39IxWc
-//my code5=AIzaSyCnNvXhEYVofk-3KLDHDmkG4Wp9OyX4ENU
-//my code6=AIzaSyCJDOX7aE-LwirA61QBZCF6s1QcYVrtDpo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
