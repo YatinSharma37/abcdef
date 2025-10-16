@@ -2,7 +2,7 @@ const https = require("https");
 const fs = require("fs");
 
 // Your Gemini API key from Google AI Studio
-const API_KEY = "your-api-key";
+const API_KEY = "AIzaSyCJDOX7aE-LwirA61QBZCF6s1QcYVrtDpo";
 
 // Model
 const MODEL = "gemini-2.0-flash";
@@ -78,3 +78,12 @@ const req = https.request(options, (res) => {
 req.on("error", (err) => console.error("Request error:", err));
 req.write(data);
 req.end();
+
+
+
+//my code1=AIzaSyCxsgyZKQetEraddOKdyoQBt9L2qXUvBTE
+// my code2=AIzaSyDvGcmMsI1Tk4AiRRd5ruuWzcIDjNFYoyE
+//my code3=AIzaSyC_hcPsEGc6yYe1TlBtTxKEQQ5p-VWRNHs
+//my code4=AIzaSyDs0evCkUw9K1J_8VMYX-tbf0IBq39IxWc
+//my code5=AIzaSyCnNvXhEYVofk-3KLDHDmkG4Wp9OyX4ENU
+//my code6=AIzaSyCJDOX7aE-LwirA61QBZCF6s1QcYVrtDpo
