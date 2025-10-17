@@ -2,7 +2,7 @@ const https = require("https");
 const fs = require("fs");
 
 
-const API_KEY = "your api key";
+const API_KEY = "Your api key";
 
 
 const MODEL = "gemini-2.0-flash";
@@ -90,7 +90,49 @@ req.end();
 
 
 
+// my code7=AIzaSyDPd1W6a9BE5
+// P24lmaodbZ_X
+// CwuCQ5XvWg
 
+
+
+
+//my code8=AIzaSyCesn
+
+// JnBqSrUes7QBI714
+
+// cFAnoYdNyLYjM
+
+
+
+
+//my code9=AIzaSyC6wp6VSA6
+
+// kHP18Fj0iXPXobE
+
+// gkoXPYHSE
+
+
+
+//my code10=AIzaSyBlKlP_Pt
+
+// 6qi9Gfb5eEhqtX
+
+// QfGtpO4zjMM
+
+
+
+
+//mycode 11=AIzaSyClxiBlC
+// orJ6V8t1pxM-z38Tns
+// AsOUrXH4
+
+
+
+
+//my code12=AIzaSyC
+// y8bQFjl9BIaufeq2q
+// cmjANcNuSz_2gyo
 
 
 
